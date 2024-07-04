@@ -40,7 +40,7 @@ class Migrate extends AbstractCommand
         }
         $migrationPath=$this->getMigrationPath();
         if ($input->getOption('path')) {
-            $migrationPath = $migrationPath.DIRECTORY_SEPARATOR.$input->getOption('path');
+            $migrationPath = $input->getOption('path');
         }
         $this->repository = new DatabaseMigrationRepository($this->getDb(), $this->getMigrationTable());
         $this->migrator = new Migrator($this->repository, $this->getDb(), new Filesystem());
