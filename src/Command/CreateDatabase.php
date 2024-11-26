@@ -20,7 +20,7 @@ class CreateDatabase extends AbstractCommand
         parent::configure();
     }
 
-    public function execute(InputInterface $input, OutputInterface $output)
+    public function execute(InputInterface $input, OutputInterface $output):int
     {
         $this->bootstrap($input, $output);
         $this->getDb()->statement('CREATE DATABASE :database', ['database' => $input->getArgument('name')]);

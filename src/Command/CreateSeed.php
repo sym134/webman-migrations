@@ -22,7 +22,7 @@ class CreateSeed extends AbstractCommand
         parent::configure();
     }
 
-    public function execute(InputInterface $input, OutputInterface $output)
+    public function execute(InputInterface $input, OutputInterface $output):int
     {
         $this->bootstrap($input, $output);
         $className = $this->getClassName();
