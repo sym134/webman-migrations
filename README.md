@@ -4,7 +4,7 @@
 
 
 ```bash
-composer require jizhi/migrations-webman
+composer require jizhi/webman-migrations
 ```
  和laravel migration 使用方法类似
 - php webman migrate:created create_users_table 生成迁移文件
