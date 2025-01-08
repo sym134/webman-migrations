@@ -1,4 +1,11 @@
 # webman-migration
+
+来自composer require pxianyu/migrations
+
+
+```bash
+composer require jizhi/migrations-webman
+```
  和laravel migration 使用方法类似
 - php webman migrate:created create_users_table 生成迁移文件
 - php webman migrate:created create_users_table --path=admin 生成迁移文件是指定目录
@@ -18,13 +25,18 @@ $table->id();
 $table->timestamps();
 });
 ```
-dev 
- `composer require pxianyu/migrations:dev-dev`
- 在同一个host，同一个端口下，指定不同的库
- 
+在同一个host，同一个端口下，指定不同的库
+```bash
+composer require pxianyu/migrations:dev-dev`
+```
 创建数据库
-`php webman create:database test`
+```bash
+php webman create:database test
+```
 执行迁移
-`php webman migrate:run --database=test`
+```bash
+php webman migrate:run --database=test
+```
 填充数据
-`- php webman seed:run --database=test`
+```bash- php webman seed:run --database=test
+```
