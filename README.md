@@ -27,7 +27,7 @@ $table->timestamps();
 ```
 在同一个host，同一个端口下，指定不同的库
 ```bash
-composer require pxianyu/migrations:dev-dev`
+composer require pxianyu/migrations:dev-dev
 ```
 创建数据库
 ```bash
@@ -38,5 +38,6 @@ php webman create:database test
 php webman migrate:run --database=test
 ```
 填充数据
-```bash- php webman seed:run --database=test
+```bash
+ php webman seed:run --database=test
 ```
